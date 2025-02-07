@@ -1,0 +1,21 @@
+# 基础模型配置
+model:
+  name: "roberta-base"  # 可选 roberta-base / roberta-large
+  pretrained_path: "roberta-base"  # HuggingFace模型名称或本地路径
+  save_dir: "./saved_models"
+  finetune: True  # 是否进行微调
+
+# 训练通用参数
+training:
+  batch_size: 32
+  learning_rate: 2e-5
+  max_epochs: 10
+  early_stop_patience: 3 
+
+# 新增任务选择配置
+task:
+  name: "mrpc"  # 修改此处切换任务 
+
+  # cola
+  # sst2
+  # mrpc

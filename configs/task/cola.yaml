@@ -1,0 +1,25 @@
+# 继承基础配置
+_base_: ["../base.yaml"]
+
+# # 覆盖模型配置
+# model:
+#   name: "roberta-base"  # 可在此处指定任务专用模型
+#   learning_rate: 3e-5  # 任务特定学习率
+
+# 任务特定配置
+task:
+  name: "cola"
+  dataset_name: "glue"
+  dataset_config: "cola"
+  
+  # 数据字段映射
+  text_field: "sentence"
+  label_field: "label"
+  
+  # 评估指标配置
+  metrics: ["matthews_corr"]
+  evaluation_mode: "classification"  # 虽然任务是语法可接受性，但按二分类处理
+  
+  # 模型输出配置
+  num_labels: 2
+  output_mode: "classification" 

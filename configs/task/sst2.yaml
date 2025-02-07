@@ -1,0 +1,18 @@
+_base_: ["../base.yaml"]
+
+task:
+  name: "sst2"
+  dataset_name: "glue"
+  dataset_config: "sst2"
+  
+  # 数据字段映射
+  text_field: "sentence"
+  label_field: "label"
+  
+  # 评估指标配置
+  metrics: ["accuracy"]
+  evaluation_mode: "classification"
+  
+  # 模型输出配置
+  num_labels: 2
+  output_mode: "classification" 
