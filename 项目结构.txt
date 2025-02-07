@@ -19,7 +19,6 @@ gelu_baseline/
 │   │   ├── rte.yaml
 │   │   ├── stsb.yaml
 │   │   ├── wnli.yaml
-│   │   ├── stsb.yaml
 │   │   └── ...
 ├── src/
 │   ├── data/              # 数据加载处理

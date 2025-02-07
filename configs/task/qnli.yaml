@@ -1,0 +1,18 @@
+_base_: ["../base.yaml"]
+
+task:
+  name: "qnli"
+  dataset_name: "glue"
+  dataset_config: "qnli"
+  
+  # 数据字段映射（问题-句子对）
+  text_fields: ["question", "sentence"]
+  label_field: "label"
+  
+  # 评估指标配置
+  metrics: ["accuracy"]
+  evaluation_mode: "classification"
+  
+  # 模型输出配置
+  num_labels: 2
+  output_mode: "classification" 

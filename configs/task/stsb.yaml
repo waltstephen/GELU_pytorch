@@ -1,0 +1,18 @@
+_base_: ["../base.yaml"]
+
+task:
+  name: "stsb"
+  dataset_name: "glue"
+  dataset_config: "stsb"
+  
+  # 数据字段映射（句子对）
+  text_fields: ["sentence1", "sentence2"]
+  label_field: "label"
+  
+  # 评估指标配置（回归任务）
+  metrics: ["pearson", "spearman"]
+  evaluation_mode: "regression"
+  
+  # 模型输出配置
+  num_labels: 1
+  output_mode: "regression" 
