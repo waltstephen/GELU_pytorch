@@ -1,9 +1,9 @@
 # 基础模型配置
 model:
-  name: "roberta-base"  # 可选 roberta-base / roberta-large
+  name: "roberta-large"  # 可选 roberta-base / roberta-large
   pretrained_path: "roberta-base"  # HuggingFace模型名称或本地路径
   save_dir: "./saved_models"
-  finetune: True  # 是否进行微调
+  # finetune: True  # 是否进行微调
 
 # 训练通用参数
 training:
